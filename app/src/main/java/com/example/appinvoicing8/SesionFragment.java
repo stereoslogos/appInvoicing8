@@ -51,8 +51,12 @@ public class SesionFragment extends Fragment implements Response.Listener<JSONOb
     }
 
     private void iniciarSesion(String correo, String clave) {
-        String url = "http://172.16.60.19:81/invoicing/searchcustomer.php?email="+correo+"&passwd="+clave;
-        jrq = new JsonObjectRequest(Request.Method.GET,url,null,this,this);
+        //Toast.makeText(getContext(), "Correo "+correo+" clave "+clave, Toast.LENGTH_SHORT).show();
+        //http://localhost:81/invoicing/searchcustomer.php?email=elpaisarest@gmail.com&passwd=1010
+
+        //String url = "http://172.16.60.19:81/invoicing/searchcustomer.php?email="+correo+"&passwd="+clave;
+        String pieichpi = "http://172.16.60.19:81/invoicing/searchcustomer.php?email="+correo+"&passwd="+clave;
+        jrq = new JsonObjectRequest(Request.Method.GET,pieichpi,null,this,this);
         rq.add(jrq);
     }
 
